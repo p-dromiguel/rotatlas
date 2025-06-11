@@ -649,7 +649,7 @@ header {
 
 #streetview-container {
   flex: 1;
-  max-width: 700px;
+  max-width: 500px;
   height: auto;
   display: flex;
   align-items: center;
@@ -657,10 +657,10 @@ header {
 }
 
 #streetview-container iframe {
-  width: 800px;
+  width: 100%;
   height: 650px;
   border-radius: 10px;
-  transform: translateY(130px); /* Ajuste o valor conforme desejar */
+  transform: translateY(120px); /* Ajuste o valor conforme desejar */
 }
 
 @media (max-width: 768px) {
@@ -767,4 +767,50 @@ header {
 
 #no-destination-message.loading {
   color: #ff9800;
+}
+.texto {
+  flex: 1;
+  min-width: 300px; /* Garantir que o texto não fique fora de proporção */
+  padding: 20px;
+  color: #ffffff;
+  font-size: 45px;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.quadrado {
+  display: flex;
+  justify-content: space-between;
+  background-color: #004d40;
+  border-radius: 10px;
+  width: 70%;
+  height: 800px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+#streetview-container {
+  flex: 1;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#streetview-container iframe {
+  width: 100%;
+  height: 700px;
+  border-radius: 10px;
+  transform: translateY(120px); /* Ajuste o valor conforme desejar */
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 45px;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
 }
