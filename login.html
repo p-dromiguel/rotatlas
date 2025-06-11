@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota Atlas - Login</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" type="image/png" href="icones/favicon-16x16.png">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo">
+            </a>
+        </div>
+
+        <form id="loginForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Digite seu email" required>
+                <span class="icon"> 
+                    <img src="images/7a2c2809e99cd04d5a2bd752389d98f0.png" width="15px" height="15px">
+                </span>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+                <span class="icon">
+                    <img src="images/cadeado png.webp" width="15px" height="15px" alt="">
+                </span>
+            </div>
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox" id="remember"> Lembrar senha
+                </label>
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Entrar</button>
+        </form>
+
+        <div id="error-message" class="error-message" style="color: red;"></div>
+
+        <div class="login-options">
+            <p>Não tem uma conta? <a href="Cadastrar.html">Cadastrar-se</a></p>
+            <br>
+            <div class="social-login">
+                <a href="https://www.google.com.br/"><img src="images/Google-Symbol.png" class="media-object  img-responsive img-thumbnail" alt="Login com Google"></a>
+                <a href="https://pt-br.facebook.com/"><img src="images/facebook-logo-1-2.png" class="media-object  img-responsive img-thumbnail" alt="Login com Facebook"></a>
+                <a href="https://mail.google.com/"><img src="images/email-logo-png-gmail.png" class="media-object  img-responsive img-thumbnail" alt="Login com Email"></a>
+            </div>
+        </div>
+
+        <!-- Modal Esqueceu a senha -->
+        <div id="forgot-password-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/logo_site_-removebg-preview (1).png" alt="Logo" class="modal-logo">
+                <h2>Esqueceu sua senha?</h2>
+                <p>Insira seu e-mail abaixo e enviaremos um código para redefinir sua senha.</p>
+                <form id="forgotPasswordForm">
+                    <input type="email" id="resetEmail" placeholder="Digite seu e-mail" required>
+                    <button type="submit" class="btn-reset">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+
+</html>

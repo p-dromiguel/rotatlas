@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porto de Galinhas</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style2.css" />
+  <!-- Ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+  <!-- Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html">Destinos</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="avaliações.html">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Porto de Galinhas</h1>
+      <h2 class="hero-subtitle"></h2>
+    </section>
+
+    <section class="travel-package">
+      <div class="image-layout">
+        <img src="images/porto-de-galinhas-3.jpg" alt="Imagem grande da Porto de Galinhas" class="image-large" />
+        <div class="image-small-container">
+          <img src="images/portodegalinhas.webp" alt="Imagem menor 1" class="image-small" />
+          <img src="images/portdegalinhas.webp" alt="Imagem menor 2" class="image-small" />
+        </div>
+      </div>
+
+      <div class="package-description">
+        <h2>Descubra Porto de Galinhas: Um Paraíso no Nordeste Brasileiro</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Porto de Galinhas, localizada no estado de Pernambuco, é um dos destinos mais deslumbrantes do Brasil. Famosa por suas piscinas naturais de águas cristalinas e recifes de corais, a vila é perfeita para quem busca relaxar em meio a cenários paradisíacos.
+        </p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center;">Para melhor aproveitar sua viagem</h2>
+
+    <section class="lugarprincipal">
+      <div class="atração">
+        <img src="images/portodegalinhasmain.jpg" alt="Piscinas Naturais" />
+        <h3>Piscinas Naturais</h3>
+        <p>
+          As piscinas naturais de Porto de Galinhas são verdadeiras joias do litoral brasileiro, formadas entre recifes de corais que criam um cenário de tirar o fôlego...
+        </p>
+      </div>
+    </section>
+
+    <section class="informacoes-rapidas">
+      <div class="info-item">
+        <span class="info-icon">🌴</span>
+        <span class="info-text">Beleza paradisíaca e natureza exuberante</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💰</span>
+        <span class="info-text">$$$ - $$$$</span>
+      </div>
+    </section>
+
+    <section class="layout-avaliacoes">
+      <div class="avaliacoes">
+        <h2>Avaliações de Porto de Galinhas</h2>
+        <div class="avaliacao-principal">
+          <span class="nota-principal">4.8</span>
+          <div class="estrelas">★★★★★</div>
+          <p class="numero-avaliacoes">Baseado em 1.920 avaliações</p>
+        </div>
+
+        <div class="detalhe-item"><span class="label">Beleza Natural</span><div class="barra"><div class="progresso" style="width: 97%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Conforto e Infraestrutura</span><div class="barra"><div class="progresso" style="width: 90%;"></div></div><span class="nota">4.5</span></div>
+        <div class="detalhe-item"><span class="label">Atividades e Passeios</span><div class="barra"><div class="progresso" style="width: 93%;"></div></div><span class="nota">4.7</span></div>
+        <div class="detalhe-item"><span class="label">Custo-Benefício</span><div class="barra"><div class="progresso" style="width: 88%;"></div></div><span class="nota">4.4</span></div>
+      </div>
+    </section>
+
+    <section class="comentarios-recentes">
+      <h2 class="comentarios-titulo">Os mais recentes</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Porto de Galinhas é um paraíso! As piscinas naturais são maravilhosas...</p>
+          <div class="comentario-info">
+            <img src="images/perfil11.jpg" alt="Avatar" class="comentario-avatar" />
+            <span class="comentario-autor">@mar_de_sorrisos</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <!-- Outras avaliações -->
+      </div>
+    </section>
+
+    <section class="lugares-recomendados">
+      <h2 class="lugares-titulo">Recomendações Imperdíveis</h2>
+      <!-- Cards como estavam anteriormente -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* Estilos para a barra de pesquisa */
+.search-bar {
+  display: flex;
+  flex-direction: column; /* Empilha os itens (barra e sugestões) */
+  align-items: center;    /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente (se necessário) */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
+}
+
+#search-bar {
+  width: 100%;           /* Ocupa toda a largura disponível */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  text-align: center;    /* Centraliza o texto digitado */
+}
+
+/* Caixa de sugestões com largura reduzida e centralizada */
+#suggestions-list {
+  display: block;
+  width: 80%;            /* Reduz a largura da caixa de sugestões */
+  margin: 5px auto;      /* Centraliza horizontalmente */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;    /* Centraliza o texto das opções */
+}
+
+/* Estilos dos itens de sugestão */
+#suggestions-list li {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+
+  
+
+  

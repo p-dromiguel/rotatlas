@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Busan</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style2.css" />
+
+  <!-- ÍCONES -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+
+  <!-- ALPINE.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+  <!-- ======= HEADER ======= -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Busan</h1>
+    </section>
+
+    <section class="travel-package">
+      <div class="image-layout">
+        <img src="images/busanmain.jpg" alt="Imagem grande da Busan" class="image-large">
+        <div class="image-small-container">
+          <img src="images/busan1.jpg" alt="Imagem menor 1 de Busan" class="image-small">
+          <img src="images/busan2.avif" alt="Imagem menor 2 de Busan" class="image-small">
+        </div>
+      </div>
+
+      <div class="package-description">
+        <h2>Descubra Busan: Onde a Tradição Encontra a Modernidade</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Busan, a segunda maior cidade da Coreia do Sul, oferece praias, templos e mercados vibrantes. Explore a Haeundae Beach, o mercado Jagalchi e o templo Haedong Yonggungsa. Um equilíbrio entre cultura tradicional e energia urbana!
+        </p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center;">Para melhor aproveitar sua viagem</h2>
+
+    <section class="lugarprincipal">
+      <div class="atração">
+        <img src="images/haedong.jpg" alt="Haedong Yonggungsa" />
+        <h3>Haedong Yonggungsa</h3>
+        <p>
+          Localizado na costa, o Templo Haedong Yonggungsa oferece uma vista de tirar o fôlego. Fundado em 1376, mistura espiritualidade com paisagens marinhas incríveis. Caminhe pelas esculturas budistas e aproveite a tranquilidade com o som das ondas.
+        </p>
+      </div>
+    </section>
+
+    <section class="informacoes-rapidas">
+      <div class="info-item">
+        <span class="info-icon">🌙</span>
+        <span class="info-text">História e tradição, vista incrível</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💰</span>
+        <span class="info-text">$$ - $$$</span>
+      </div>
+    </section>
+
+    <section class="layout-avaliacoes">
+      <div class="avaliacoes">
+        <h2>Avaliações do Haedong Yonggungsa</h2>
+        <div class="avaliacao-principal">
+          <span class="nota-principal">4.8</span>
+          <div class="estrelas">★★★★★</div>
+          <p class="numero-avaliacoes">Baseado em 1.320 avaliações</p>
+        </div>
+        <div class="detalhe-item"><span class="label">Beleza Visual</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Experiência Cultural</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Tradição</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.7</span></div>
+        <div class="detalhe-item"><span class="label">Significado</span><div class="barra"><div class="progresso" style="width: 92%;"></div></div><span class="nota">4.6</span></div>
+      </div>
+    </section>
+
+    <section class="comentarios-recentes">
+      <h2 class="comentarios-titulo">Os mais recentes</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Templo maravilhoso! Vista do mar incrível, recomendo ao nascer do sol.</p>
+          <div class="comentario-info">
+            <img src="images/pfp1.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@viajant21</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Experiência mágica e espiritual! Um dos lugares mais belos da Coreia.</p>
+          <div class="comentario-info">
+            <img src="images/pfp2.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@culturante</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★☆</div>
+          <p class="comentario-texto">Lugar incrível e cheio de paz. Fiquei maravilhado com a arquitetura!</p>
+          <div class="comentario-info">
+            <img src="images/pfp3.webp" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@rizoma312</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lugares-recomendados">
+      <h2 class="lugares-titulo">Recomendações Imperdíveis</h2>
+
+      <!-- CARD 1 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/haedongy.jpg" alt="Templo Haedong Yonggungsa" /></div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">01.</span>
+            <h3 class="lugar-nome">Haedong Yonggungsa</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Busan, Coreia do Sul</span>
+          <div class="lugar-avaliacao"><span class="estrelas">★★★★★</span><span class="numero-avaliacoes">(3.421 avaliações)</span></div>
+          <p class="lugar-descricao">Templo à beira-mar com vista épica e espiritualidade envolvente.</p>
+          <div class="lugar-tags"><span class="tag">Templo</span><span class="tag">Vista do Mar</span><span class="tag">Espiritualidade</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/HaeundaeBeach.webp" alt="Haeundae Beach" /></div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">02.</span>
+            <h3 class="lugar-nome">Haeundae Beach</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Busan, Coreia do Sul</span>
+          <div class="lugar-avaliacao"><span class="estrelas">★★★★☆</span><span class="numero-avaliacoes">(4.029 avaliações)</span></div>
+          <p class="lugar-descricao">A praia mais famosa da Coreia. Ideal para relaxar ou curtir o agito local.</p>
+          <div class="lugar-tags"><span class="tag">Praia</span><span class="tag">Relaxamento</span><span class="tag">Beleza Natural</span></div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/feature-Gamcheon-Culture-Village.jpg" alt="Gamcheon Culture Village" /></div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">03.</span>
+            <h3 class="lugar-nome">Gamcheon Culture Village</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Busan, Coreia do Sul</span>
+          <div class="lugar-avaliacao"><span class="estrelas">★★★★★</span><span class="numero-avaliacoes">(2.958 avaliações)</span></div>
+          <p class="lugar-descricao">Bairro artístico e colorido com murais, escadas e galerias fotogênicas.</p>
+          <div class="lugar-tags"><span class="tag">Cultura</span><span class="tag">Arte</span><span class="tag">Exploração</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

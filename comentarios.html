@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comentários sobre Angra dos Reis</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="destino.html">Destinos</a></li> 
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="avaliações.html">Avaliações</a></li>
+      </ul>
+    </nav>
+    <div class="actions" id="user-area"></div>
+  </header>
+
+  <section class="hero-comentarios">
+    <div class="hero-content">
+      <h1>Angra dos Reis</h1>
+      <p>Um destino que encanta o mundo. Veja o que estão dizendo.</p>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIOS FIXOS -->
+  <section class="comentarios-lista">
+    <div class="comentario-card">
+      <p class="comentario">"As ilhas são paradisíacas. Não dá vontade de ir embora!"</p>
+      <p class="autor">– Maria Souza <span class="local">do Rio de Janeiro 🇧🇷</span></p>
+    </div>
+    <div class="comentario-card">
+      <p class="comentario">"A água transparente, o clima... tudo em Angra é perfeito."</p>
+      <p class="autor">– João da Silva <span class="local">de Lisboa 🇵🇹</span></p>
+    </div>
+    <div class="comentario-card">
+      <p class="comentario">"Recomendo o passeio de escuna. Foi uma das melhores experiências da minha vida."</p>
+      <p class="autor">– Ana Paula <span class="local">de Buenos Aires 🇦🇷</span></p>
+    </div>
+    <div class="comentario-card">
+      <p class="comentario">"Angra dos Reis é puro encanto. Férias perfeitas com minha família."</p>
+      <p class="autor">– Thomas Müller <span class="local">de Munique 🇩🇪</span></p>
+    </div>
+  </section>
+
+  <!-- COMENTÁRIOS DINÂMICOS -->
+  <section class="comentarios-lista" id="comentarios-lista">
+    <!-- Novos comentários aparecerão aqui via JS -->
+  </section>
+
+  <div class="comentario-btn-area">
+    <button id="abrir-modal">Comentar</button>
+  </div>
+
+  <a href="avaliações.html" class="voltar-link">Voltar</a>
+
+  <!-- Modal de Comentário -->
+  <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="fechar-modal">&times;</span>
+    <h2>Deixe seu comentário</h2>
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="text" id="cidade" placeholder="Sua cidade ou país" required>
+    <textarea id="comentario" placeholder="Seu comentário sobre Angra dos Reis" required></textarea>
+    <button id="enviar-comentario">Enviar</button>
+  </div>
+</div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

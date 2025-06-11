@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rota Atlas</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+  <link rel="stylesheet" href="https://unpkg.com/mapillary-js@4.0.0/dist/mapillary.min.css" />
+<script src="https://unpkg.com/mapillary-js@4.0.0/dist/mapillary.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html">Destinos</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="avaliações.html">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+   
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>ROTA <span>ATLAS</span></h1>
+      <p class="subtitle">
+        Descubra destinos incríveis, planeje suas aventuras e explore o mundo com as melhores dicas e opções de hospedagem — tudo em um só lugar.
+      </p>
+      <div class="hero-actions">
+<div class="search-bar-wrapper">
+  <div class="search-bar">
+    <input type="text" id="search-bar" placeholder="Para onde deseja ir?" oninput="showSuggestions(this.value)" />
+    <button class="search-btn" aria-label="Buscar" onclick="goToDestination()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </button>
+  </div>
+  <ul id="suggestions-list"></ul>
+  <p id="no-destination-message" style="display: none; color: red; font-size: 16px; text-align: center;">Destino não encontrado. Estamos acumulando mais informações sobre ele...</p>
+</div>
+    </section>
+
+    <section class="cards-section">
+      <!-- Mantido como estava -->
+      <div class="card">
+        <a href="tailandia.html" style="color:white; text-decoration: none;">
+          <img src="images/thai.jpg" alt="Tailândia" loading="lazy" />
+          <div class="card-content">
+            <h3>Descubra a Tailândia! Passagens aéreas para Bangkok e Phuket a partir de R$ 2.100</h3>
+            <p>Lucas Mendes · há 2 horas</p>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="riodejaneiro.html" style="color:white; text-decoration: none;">
+          <img src="images/zz.jpg" alt="Rio de Janeiro" loading="lazy" />
+          <div class="card-content">
+            <h3>Explore as maravilhas do Rio de Janeiro! Passagens aéreas para a Cidade Maravilhosa!</h3>
+            <p>Vínicius Gomes · há 5 horas</p>
+          </div>
+        </a>
+      </div>
+      <div class="card">
+        <a href="busan.html" style="color:white; text-decoration: none;">
+          <img src="images/busan2.avif" alt="Busan" loading="lazy" />
+          <div class="card-content">
+            <h3>Explore Busan! Passagens aéreas para o país da história e cultura a partir de R$ 1200.</h3>
+            <p>Carlos Ferreira · há 3 horas</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="call-to-action">
+      <h2>Conheça os destinos mais incríveis!</h2>
+      <p>Explore os destinos mais belos do mundo e descubra novas culturas, paisagens deslumbrantes e experiências inesquecíveis.</p>
+    </section>
+
+    <section class="container">
+      <div class="quadrado">
+        <div class="texto">
+          <h1>Explore com </h1>
+          <h1> a Rota Atlas</h1>
+          <div class="texto2">
+            <p>Guias completos <br /> e sugestões de roteiros:</p>
+          </div>
+          <div class="textin">
+            <br />Descubra os principais pontos turísticos, cultura local, gastronomia e dicas de viagem.
+          </div>
+          <button class="surpreenda-me-btn" onclick="surpreendaMe()">Surpreenda-me!</button>
+          <div class="mensagem-destino" id="mensagem-destino">
+            Clique no botão para ser surpreendido por um destino aleatório!
+          </div>
+          <div id="nome-destino" class="nome-destino"></div>
+          <div id="texto-gerado" class="texto-gerado"></div>
+        </div>
+       <div id="streetview-container" style="width: 100%; height: 400px; margin-top: 20px;"></div>
+
+
+      </div>
+    </section>
+  </main>
+
+
+  <script src="js.js"></script>
+<script src="main.js"></script>
+<script src="streetview.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

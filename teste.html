@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mapillary Street View Teste</title>
+  <link rel="stylesheet" href="https://unpkg.com/mapillary-js@4.0.0/dist/mapillary.min.css" />
+  <style>
+    #mly {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Visualizador Mapillary (Paris)</h1>
+  <div id="mly"></div>
+
+  <script src="https://unpkg.com/mapillary-js@4.0.0/dist/mapillary.min.js"></script>
+  <script>
+    const MAPILLARY_CLIENT_TOKEN = "MLY|29888713484076935|86269007c2a2258960fcdbf65ebe784a";
+
+    fetch(`https://graph.mapillary.com/images?access_token=${MAPILLARY_CLIENT_TOKEN}&fields=id&closeto=2.3522,48.8566&limit=1`)
+      .then(res => res.json())
+      .then(data => {
+        const imageId = data.data[0].id;
+
+        const viewer = new Mapillary.Viewer({
+          accessToken: MAPILLARY_CLIENT_TOKEN,
+          container: 'mly',
+          imageId: imageId
+        });
+      })
+      .catch(err => {
+        console.error("Erro ao carregar imagem:", err);
+      });
+  </script>
+</body>
+</html>

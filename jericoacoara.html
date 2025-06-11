@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pacote de Viagem - Jericoacoara</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+  <!-- ======= CABEÇALHO ======= -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Jericoacoara, CE - Brasil</h1>
+    </section>
+
+    <section class="travel-package">
+      <div class="image-layout">
+        <img src="images/jerico1.jpg" alt="Imagem grande de Jericoacoara" class="image-large">
+        <div class="image-small-container">
+          <img src="images/Jericoacoara2.webp" alt="Imagem menor 1 de Jericoacoara" class="image-small">
+          <img src="images/jerico3.jpg" alt="Imagem menor 2 de Jericoacoara" class="image-small">
+        </div>
+      </div>
+
+      <div class="package-description">
+        <h2>Descubra Jericoacoara: O Tesouro do Ceará!</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Com dunas douradas, lagoas cristalinas e um pôr do sol espetacular, Jericoacoara é um refúgio de beleza natural. Passeios de buggy, trilhas e relaxamento em redes sobre as águas são experiências obrigatórias!
+        </p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center;">Para melhor aproveitar sua viagem</h2>
+
+    <section class="lugarprincipal">
+      <div class="atração">
+        <img src="images/jericobuggy.png" alt="Passeio de Buggy" />
+        <h3>1. Passeio de Buggy</h3>
+        <p>
+          Explore Jericoacoara em um buggy pelas dunas e lagoas como a do Paraíso e Azul. Guias experientes tornam o passeio seguro e memorável. Adrenalina e paisagens de tirar o fôlego garantidas!
+        </p>
+      </div>
+    </section>
+
+    <section class="informacoes-rapidas">
+      <div class="info-item">
+        <span class="info-icon">🚙</span>
+        <span class="info-text">Passeio de buggy, dunas e lagoas paradisíacas</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💰</span>
+        <span class="info-text">$$ - $$$</span>
+      </div>
+    </section>
+
+    <section class="layout-avaliacoes">
+      <div class="avaliacoes">
+        <h2>Avaliações do Passeio de Buggy</h2>
+        <div class="avaliacao-principal">
+          <span class="nota-principal">4.9</span>
+          <div class="estrelas">★★★★★</div>
+          <p class="numero-avaliacoes">Baseado em 1.532 avaliações</p>
+        </div>
+        <div class="detalhe-item"><span class="label">Beleza Natural</span><div class="barra"><div class="progresso" style="width: 97%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Aventura</span><div class="barra"><div class="progresso" style="width: 94%;"></div></div><span class="nota">4.7</span></div>
+        <div class="detalhe-item"><span class="label">Preço</span><div class="barra"><div class="progresso" style="width: 89%;"></div></div><span class="nota">4.5</span></div>
+        <div class="detalhe-item"><span class="label">Serviço</span><div class="barra"><div class="progresso" style="width: 93%;"></div></div><span class="nota">4.7</span></div>
+      </div>
+    </section>
+
+    <section class="comentarios-recentes">
+      <h2 class="comentarios-titulo">Os mais recentes</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Dunas, lagoas e aventura! Um passeio completo e seguro. Incrível!</p>
+          <div class="comentario-info">
+            <img src="images/perfilanon.webp" alt="Avatar do usuário" class="comentario-avatar">
+            <span class="comentario-autor">@viajantefeliz</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Experiência mágica! As lagoas são surreais e o pôr do sol é um show à parte.</p>
+          <div class="comentario-info">
+            <img src="images/perfilanon.webp" alt="Avatar do usuário" class="comentario-avatar">
+            <span class="comentario-autor">@aventuranaestrada</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★☆</div>
+          <p class="comentario-texto">Vale muito a pena! Só queria mais tempo em algumas paradas.</p>
+          <div class="comentario-info">
+            <img src="images/perfilanon.webp" alt="Avatar do usuário" class="comentario-avatar">
+            <span class="comentario-autor">@explorandoparadisos</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lugares-recomendados">
+      <h2 class="lugares-titulo">Recomendações Imperdíveis</h2>
+
+      <!-- Lugar 1 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/dunasjericoacoara.jpg" alt="Dunas de Jericoacoara"></div>
+        <div class="lugar-info">
+          <div class="lugar-header"><span class="lugar-numero">01.</span><h3 class="lugar-nome">Dunas de Jericoacoara</h3><button class="salvar-btn">Salvar</button></div>
+          <span class="lugar-local">📍 Jericoacoara, Brasil</span>
+          <div class="lugar-avaliacao"><span class="estrelas">★★★★★</span><span class="numero-avaliacoes">(1.875 avaliações)</span></div>
+          <p class="lugar-descricao">Viva o pôr do sol mais bonito do Brasil entre dunas douradas.</p>
+          <div class="lugar-tags"><span class="tag">Natureza</span><span class="tag">Pôr do Sol</span><span class="tag">Aventura</span></div>
+        </div>
+      </div>
+
+      <!-- Lugar 2 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/lagoaparaiso.jpg" alt="Lagoa do Paraíso"></div>
+        <div class="lugar-info">
+          <div class="lugar-header"><span class="lugar-numero">02.</span><h3 class="lugar-nome">Lagoa do Paraíso</h3><button class="salvar-btn">Salvar</button></div>
+          <span class="lugar-local">📍 Jericoacoara, Brasil</span>
+          <div class="lugar-avaliacao"><span class="estrelas">★★★★★</span><span class="numero-avaliacoes">(2.145 avaliações)</span></div>
+          <p class="lugar-descricao">Água cristalina, rede dentro da lagoa, sombra e sossego. Simplesmente paradisíaco.</p>
+          <div class="lugar-tags"><span class="tag">Relaxamento</span><span class="tag">Águas Claras</span><span class="tag">Famílias</span></div>
+        </div>
+      </div>
+
+      <!-- Lugar 3 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/pedrafurada.jpg" alt="Pedra Furada"></div>
+        <div class="lugar-info">
+          <div class="lugar-header"><span class="lugar-numero">03.</span><h3 class="lugar-nome">Pedra Furada</h3><button class="salvar-btn">Salvar</button></div>
+          <span class="lugar-local">📍 Jericoacoara, Brasil</span>
+          <div class="lugar-avaliacao"><span class="estrelas">★★★★☆</span><span class="numero-avaliacoes">(1.348 avaliações)</span></div>
+          <p class="lugar-descricao">Cartão-postal da vila. Ideal para caminhadas e fotos únicas.</p>
+          <div class="lugar-tags"><span class="tag">Cartão-Postal</span><span class="tag">Caminhada</span><span class="tag">Fotografia</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

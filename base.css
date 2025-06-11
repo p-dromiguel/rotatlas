@@ -1,0 +1,161 @@
+/* ======= RESET E TIPOGRAFIA ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #011014;
+    color: #fff;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  /* ======= HEADER PADRÃO ======= */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #011014;
+    border-bottom: 1px solid #333;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1002;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 150px;
+  height: 120px;
+  }
+  
+  /* ======= MENU ======= */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: 2px solid #fff;
+    color: white;
+    font-size: 24px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 1003;
+  }
+  
+  .main-nav {
+    display: flex;
+  }
+  
+  .main-nav ul.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  
+  .main-nav ul.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .main-nav ul.menu a:hover {
+    color: #FFD700;
+  }
+  
+  /* ======= AÇÕES DO MENU ======= */
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .login-btn,
+  .explore-btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  
+  .login-btn {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .explore-btn {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* ======= FOOTER PADRÃO ======= */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #011014;
+    color: #bbb;
+    font-size: 14px;
+  }
+  
+  /* ======= RESPONSIVO ======= */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  
+    .main-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: #000000f2;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      padding: 40px;
+    }
+  
+    .main-nav.active {
+      display: flex;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 30px;
+      font-size: 20px;
+    }
+  
+    .actions {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  
+    .login-btn,
+    .explore-btn {
+      width: 100%;
+    }
+  }
+  

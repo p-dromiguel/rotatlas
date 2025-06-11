@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Miami</title>
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="style2.css" />
+
+  <!-- ÍCONES -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+
+  <!-- ALPINE.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ======= HEADER ======= -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <!-- ======= MAIN ======= -->
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Miami</h1>
+      <h2 class="hero-subtitle"></h2>
+    </section>
+
+    <section class="travel-package">
+      <div class="image-layout">
+        <img src="images/miamimain.webp" alt="Imagem principal de Miami" class="image-large">
+        <div class="image-small-container">
+          <img src="images/miami1.jpg" alt="Imagem menor 1 de Miami" class="image-small">
+          <img src="images/miami2.jpg" alt="Imagem menor 2 de Miami" class="image-small">
+        </div>
+      </div>
+
+      <div class="package-description">
+        <h2>Descubra Miami: Onde o Sol Encontra o Estilo</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Miami é o destino ideal para quem busca praias paradisíacas, vida noturna agitada e uma rica mistura cultural. Explore South Beach, o bairro cubano de Little Havana e o Design District. Uma cidade vibrante sob o sol da Flórida.
+        </p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center;">Para melhor aproveitar sua viagem</h2>
+
+    <section class="lugarprincipal">
+      <div class="atração">
+        <img src="images/southbeach.jpg" alt="South Beach em Miami" />
+        <h3>South Beach</h3>
+        <p>
+          South Beach é a essência de Miami: águas turquesa, areia branca e a vibrante Ocean Drive. Curta o clima descontraído durante o dia e a vida noturna intensa à noite. Uma fusão perfeita entre lazer, cultura e estilo.
+        </p>
+      </div>
+    </section>
+
+    <section class="informacoes-rapidas">
+      <div class="info-item">
+        <span class="info-icon">🌙</span>
+        <span class="info-text">Dualidade dia/noite, vista incrível</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💰</span>
+        <span class="info-text">$$$ - $$$$</span>
+      </div>
+    </section>
+
+    <section class="layout-avaliacoes">
+      <div class="avaliacoes">
+        <h2>Avaliações da South Beach</h2>
+        <div class="avaliacao-principal">
+          <span class="nota-principal">4.9</span>
+          <div class="estrelas">★★★★★</div>
+          <p class="numero-avaliacoes">Baseado em 2.580 avaliações</p>
+        </div>
+        <div class="detalhe-item"><span class="label">Beleza Natural</span><div class="barra"><div class="progresso" style="width: 98%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Conforto e Infraestrutura</span><div class="barra"><div class="progresso" style="width: 94%;"></div></div><span class="nota">4.8</span></div>
+        <div class="detalhe-item"><span class="label">Vida Noturna</span><div class="barra"><div class="progresso" style="width: 96%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Custo-Benefício</span><div class="barra"><div class="progresso" style="width: 85%;"></div></div><span class="nota">4.3</span></div>
+      </div>
+    </section>
+
+    <section class="comentarios-recentes">
+      <h2 class="comentarios-titulo">Os mais recentes</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">South Beach é simplesmente incrível! Ocean Drive é um espetáculo à parte!</p>
+          <div class="comentario-info">
+            <img src="images/vancoco.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@beachlover92</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">A vibe de South Beach é única! Cultura, arte e paisagens incríveis!</p>
+          <div class="comentario-info">
+            <img src="images/perfil.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@wanderlust_ana</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★☆</div>
+          <p class="comentario-texto">A praia é espetacular. Só achei os restaurantes caros. Vale a pena!</p>
+          <div class="comentario-info">
+            <img src="images/perfil1.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@trip_adventurer</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lugares-recomendados">
+      <h2 class="lugares-titulo">Recomendações Imperdíveis</h2>
+
+      <!-- CARD 1 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/southbeach.jpg" alt="South Beach" /></div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">01.</span>
+            <h3 class="lugar-nome">South Beach</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Miami, Estados Unidos</span>
+          <div class="lugar-avaliacao">
+            <span class="estrelas">★★★★★</span>
+            <span class="numero-avaliacoes">(5.432 avaliações)</span>
+          </div>
+          <p class="lugar-descricao">Águas cristalinas, areia branca e uma atmosfera vibrante. Um paraíso em Miami!</p>
+          <div class="lugar-tags">
+            <span class="tag">Praia</span>
+            <span class="tag">Relaxamento</span>
+            <span class="tag">Vida Noturna</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/littlehavana.jpg" alt="Little Havana" /></div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">02.</span>
+            <h3 class="lugar-nome">Little Havana</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Miami, Estados Unidos</span>
+          <div class="lugar-avaliacao">
+            <span class="estrelas">★★★★☆</span>
+            <span class="numero-avaliacoes">(3.876 avaliações)</span>
+          </div>
+          <p class="lugar-descricao">O coração da cultura cubana em Miami. Culinária, música e história vibrante!</p>
+          <div class="lugar-tags">
+            <span class="tag">Cultura</span>
+            <span class="tag">Gastronomia</span>
+            <span class="tag">História</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="lugar-card">
+        <div class="lugar-imagem"><img src="images/designdistrict.jpg" alt="Design District" /></div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">03.</span>
+            <h3 class="lugar-nome">Design District</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Miami, Estados Unidos</span>
+          <div class="lugar-avaliacao">
+            <span class="estrelas">★★★★★</span>
+            <span class="numero-avaliacoes">(2.134 avaliações)</span>
+          </div>
+          <p class="lugar-descricao">Bairro sofisticado com lojas, arte e design moderno. Ideal para amantes do luxo!</p>
+          <div class="lugar-tags">
+            <span class="tag">Arte</span>
+            <span class="tag">Compras</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacote de Viagem - Tailândia</title>
+
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Tailândia</h1>
+      <h2 class="hero-subtitle"></h2>
+    </section>
+
+    <section class="travel-package">
+      <div class="image-layout">
+        <img src="images/tailandiamain.jpg" alt="Imagem grande da Tailândia" class="image-large" />
+        <div class="image-small-container">
+          <img src="images/tailandia2.jpg" alt="Imagem menor 1 de Tailândia" class="image-small" />
+          <img src="images/tailandia3.jpg" alt="Imagem menor 2 de Tailândia" class="image-small" />
+        </div>
+      </div>
+
+      <div class="package-description">
+        <h2>Descubra a Tailândia: Um Paraíso Exótico!!</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Com templos majestosos, praias deslumbrantes e uma cultura rica e vibrante, a Tailândia é um destino que encanta viajantes de todo o mundo...
+        </p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center;">Para melhor aproveitar sua viagem</h2>
+
+    <section class="lugarprincipal">
+      <div class="atração">
+        <img src="images/festivaldaslanternas.webp" alt="Festival das Lanternas" />
+        <h3>APENAS NO MÊS DE NOVEMBRO: Festival das Lanternas</h3>
+        <p>
+          Explore a beleza encantadora e o significado espiritual do Festival das Lanternas, conhecido como Loi Krathong e Yi Peng, na Tailândia...
+        </p>
+      </div>
+    </section>
+
+    <section class="informacoes-rapidas">
+      <div class="info-item">
+        <span class="info-icon">🌙</span>
+        <span class="info-text">Evento único do mês de novembro, vista incrível</span>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💰</span>
+        <span class="info-text">$$ - $$$</span>
+      </div>
+    </section>
+
+    <section class="layout-avaliacoes">
+      <div class="avaliacoes">
+        <h2>Avaliações do Festival das Lanternas</h2>
+        <div class="avaliacao-principal">
+          <span class="nota-principal">4.9</span>
+          <div class="estrelas">★★★★★</div>
+          <p class="numero-avaliacoes">Baseado em 1.512 avaliações</p>
+        </div>
+
+        <div class="detalhe-item"><span class="label">Beleza Visual</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Experiência Cultural</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Organização</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.7</span></div>
+        <div class="detalhe-item"><span class="label">Significado Espiritual</span><div class="barra"><div class="progresso" style="width: 92%;"></div></div><span class="nota">4.6</span></div>
+      </div>
+    </section>
+
+    <section class="comentarios-recentes">
+      <h2 class="comentarios-titulo">Os mais recentes</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">O Festival das Lanternas foi simplesmente mágico! Ver o céu se encher de luzes douradas foi emocionante.</p>
+          <div class="comentario-info">
+            <img src="images/pitbull.jpg" alt="Avatar do usuário" class="comentario-avatar" />
+            <span class="comentario-autor">@Explorer_John</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Participar do Festival das Lanternas foi como entrar em um conto de fadas...</p>
+          <div class="comentario-info">
+            <img src="images/us.png" alt="Avatar do usuário" class="comentario-avatar" />
+            <span class="comentario-autor">@filipe04</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★☆</div>
+          <p class="comentario-texto">Sem palavras para descrever a beleza do Festival das Lanternas! Um momento de paz e renovação...</p>
+          <div class="comentario-info">
+            <img src="images/olhochorando.jpg" alt="Avatar do usuário" class="comentario-avatar" />
+            <span class="comentario-autor">@ViniciusGomes</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lugares-recomendados">
+      <h2 class="lugares-titulo">Recomendações Imperdíveis</h2>
+
+      <div class="lugar-card">
+        <div class="lugar-imagem">
+          <img src="images/sukothai.webp" alt="Imagem do Parque Histórico de Sukhothai" />
+        </div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">01.</span>
+            <h3 class="lugar-nome">Parque Histórico de Sukhothai</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Sukhothai, Tailândia</span>
+          <div class="lugar-avaliacao">
+            <span class="estrelas">★★★★★</span>
+            <span class="numero-avaliacoes">(2.345 avaliações)</span>
+          </div>
+          <p class="lugar-descricao">Explore o histórico Parque de Sukhothai durante o Festival das Lanternas...</p>
+          <div class="lugar-tags">
+            <span class="tag">História</span>
+            <span class="tag">Cultura</span>
+            <span class="tag">Lanternas Aquáticas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lugar-card">
+        <div class="lugar-imagem">
+          <img src="images/chiangmei.jpg" alt="Imagem de Chiang Mai" />
+        </div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">02.</span>
+            <h3 class="lugar-nome">Chiang Mai</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Chiang Mai, Tailândia</span>
+          <div class="lugar-avaliacao">
+            <span class="estrelas">★★★★★</span>
+            <span class="numero-avaliacoes">(4.123 avaliações)</span>
+          </div>
+          <p class="lugar-descricao">Vivencie o céu iluminado por milhares de lanternas em Chiang Mai...</p>
+          <div class="lugar-tags">
+            <span class="tag">Tradição</span>
+            <span class="tag">Espiritualidade</span>
+            <span class="tag">Lanternas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lugar-card">
+        <div class="lugar-imagem">
+          <img src="images/bangkok.jpeg" alt="Imagem do Rio Chao Phraya em Bangkok" />
+        </div>
+        <div class="lugar-info">
+          <div class="lugar-header">
+            <span class="lugar-numero">03.</span>
+            <h3 class="lugar-nome">Bangkok</h3>
+            <button class="salvar-btn">Salvar</button>
+          </div>
+          <span class="lugar-local">📍 Bangkok, Tailândia</span>
+          <div class="lugar-avaliacao">
+            <span class="estrelas">★★★★☆</span>
+            <span class="numero-avaliacoes">(3.547 avaliações)</span>
+          </div>
+          <p class="lugar-descricao">Explore lanternas aquáticas e templos iluminados na capital da Tailândia...</p>
+          <div class="lugar-tags">
+            <span class="tag">Lanternas Aquáticas</span>
+            <span class="tag">Cultura</span>
+            <span class="tag">Modernidade</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

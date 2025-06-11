@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pacote de Viagem - Rio de Janeiro</title>
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="style2.css" />
+
+  <!-- ÍCONES -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+
+  <!-- ALPINE.JS -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ======= CABEÇALHO PADRONIZADO ======= -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Rio de Janeiro, Brasil</h1>
+      <h2 class="hero-subtitle"></h2>
+    </section>
+
+    <section class="travel-package">
+      <div class="image-layout">
+        <img src="images/riodejaneiromain.jpg" alt="Imagem grande do Rio de Janeiro" class="image-large">
+        <div class="image-small-container">
+          <img src="images/riodejaneiro1.jpg" alt="Imagem menor 1" class="image-small">
+          <img src="images/riodejaneiro2.jpg" alt="Imagem menor 2" class="image-small">
+        </div>
+      </div>
+
+      <div class="package-description">
+        <h2>Descubra o Rio de Janeiro: A Cidade Maravilhosa!</h2>
+        <p>
+          <i class="fas fa-map-marker-alt"></i> Com paisagens deslumbrantes que combinam montanhas, praias icônicas e uma cultura vibrante, o Rio de Janeiro é um dos destinos mais espetaculares do mundo. Suba o Pão de Açúcar para vistas panorâmicas, relaxe nas praias de Copacabana e Ipanema, ou explore o bairro de Santa Teresa. O Rio oferece experiências inesquecíveis em qualquer época!
+        </p>
+      </div>
+    </section>
+
+    <h2 style="text-align: center;">Para melhor aproveitar sua viagem</h2>
+
+    <section class="lugarprincipal">
+      <div class="atração">
+        <img src="images/pãodeaçucar.jpg" alt="Pão de Açúcar no Rio de Janeiro" />
+        <h3>1. Pão de Açúcar</h3>
+        <p>
+          Com paisagens deslumbrantes que combinam montanhas, praias icônicas e uma cultura vibrante, o Rio de Janeiro é um dos destinos mais espetaculares do mundo. Suba o Pão de Açúcar para vistas panorâmicas, relaxe nas praias de Copacabana e Ipanema, ou explore o histórico bairro de Santa Teresa.
+        </p>
+      </div>
+    </section>
+
+    <section class="informacoes-rapidas">
+      <div class="info-item"><span class="info-icon">🌙</span><span class="info-text">Custo-benefício, vista incrível</span></div>
+      <div class="info-item"><span class="info-icon">💰</span><span class="info-text">$$ - $$$</span></div>
+    </section>
+
+    <section class="layout-avaliacoes">
+      <div class="avaliacoes">
+        <h2>Avaliações do Pão de Açúcar</h2>
+        <div class="avaliacao-principal">
+          <span class="nota-principal">4.9</span>
+          <div class="estrelas">★★★★★</div>
+          <p class="numero-avaliacoes">Baseado em 3.205 avaliações</p>
+        </div>
+        <div class="detalhe-item"><span class="label">Beleza Visual</span><div class="barra"><div class="progresso" style="width: 98%;"></div></div><span class="nota">4.9</span></div>
+        <div class="detalhe-item"><span class="label">Infraestrutura</span><div class="barra"><div class="progresso" style="width: 95%;"></div></div><span class="nota">4.3</span></div>
+        <div class="detalhe-item"><span class="label">Custo-benefício</span><div class="barra"><div class="progresso" style="width: 85%;"></div></div><span class="nota">4.7</span></div>
+        <div class="detalhe-item"><span class="label">Acessibilidade</span><div class="barra"><div class="progresso" style="width: 92%;"></div></div><span class="nota">4.6</span></div>
+      </div>
+    </section>
+
+    <section class="comentarios-recentes">
+      <h2 class="comentarios-titulo">Os mais recentes</h2>
+      <div class="comentarios-container">
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">Uma vista de tirar o fôlego! Subir de bondinho foi incrível. Recomendo o pôr do sol!</p>
+          <div class="comentario-info">
+            <img src="images/fotodeperfil3.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@ClaudiaAventura</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★★</div>
+          <p class="comentario-texto">A estrutura é ótima, e a vista lá de cima é de cinema!</p>
+          <div class="comentario-info">
+            <img src="images/fotodeperfil2.webp" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@AmandaPeloMundo</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+        <div class="comentario">
+          <div class="comentario-estrelas">★★★★☆</div>
+          <p class="comentario-texto">Ingressos um pouco caros, mas vale muito a pena pela vista e experiência.</p>
+          <div class="comentario-info">
+            <img src="images/foodeperfil.jpg" alt="Avatar" class="comentario-avatar">
+            <span class="comentario-autor">@LucasAventureiro</span>
+            <span class="comentario-data">Novembro de 2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lugares-recomendados">
+      <h2 class="lugares-titulo">Recomendações Imperdíveis</h2>
+      <!-- Mantenha aqui os cards exatamente como já estão -->
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

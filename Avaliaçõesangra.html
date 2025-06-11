@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliações - Angra dos Reis</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="destino.html">Destinos</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="avaliações.html">Avaliações</a></li>
+      </ul>
+    </nav>
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+  <header class="header">
+    <h1>Avaliações sobre Angra dos Reis</h1>
+  </header>
+
+  <main class="container">
+    <section class="review-form">
+      <h2>Deixe sua avaliação</h2>
+      <form id="commentForm">
+        <textarea id="commentText" placeholder="Escreva seu comentário aqui..." required></textarea>
+        <div class="rating">
+          <label>
+            <input type="radio" name="rating" value="1"> ★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="2"> ★★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="3"> ★★★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="4"> ★★★★
+          </label>
+          <label>
+            <input type="radio" name="rating" value="5" checked> ★★★★★
+          </label>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section class="reviews">
+      <h2>Comentários dos Usuários</h2>
+      <div id="commentsList">
+
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('commentForm');
+    const commentsList = document.getElementById('commentsList');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const commentText = document.getElementById('commentText').value;
+      const rating = document.querySelector('input[name="rating"]:checked').value;
+
+      const comment = document.createElement('div');
+      comment.classList.add('comment');
+      comment.innerHTML = `
+        <div class="rating-display">${'★'.repeat(rating)}</div>
+        <p>${commentText}</p>
+      `;
+
+      commentsList.prepend(comment);
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>

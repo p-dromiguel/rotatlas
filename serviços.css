@@ -1,0 +1,285 @@
+/* Hero Section */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #004d40;
+  position: relative;
+  z-index: 1000;
+} 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 120px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.explore-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.login-btn {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.explore-btn {
+  background: none;
+  border: 2px solid #f0ec01;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: white;
+  font-size: 24px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f9;
+  color: #000000;
+  box-shadow: #000000;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #000000;
+}
+
+/* Grid de Serviços */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  background-color: #f4f4f9;
+}
+
+.service-box {
+  text-align: center;
+  padding: 20px;
+  background: #EFEFEF; /* Cinza escuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+  background-color: #3b3b3b; /* Escurece no hover */
+}
+
+.service-box h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #1C1B17;
+}
+
+.service-box p {
+  font-size: 1em;
+  color: #1C1B17;
+  margin-bottom: 15px;
+}
+
+.service-box img {
+  width: 350px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f9;
+  color: #000000;
+}
+
+/* ======= Responsividade ======= */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 30px;
+  }
+
+  .service-box img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .main-nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #000000f2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    padding: 40px;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-btn, .explore-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .service-box img {
+    width: 100%;
+  }
+
+  .menu-toggle {
+    font-size: 20px;
+  }
+}
+
+
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: white;
+  font-size: 24px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.main-nav ul.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.main-nav ul.menu a:hover {
+  color: #FFD700;
+}

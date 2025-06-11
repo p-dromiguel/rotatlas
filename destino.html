@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rota Atlas - Destinos</title>
+  <link rel="stylesheet" href="destinos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+    
+  </header>
+
+  <main>
+    <section class="hero">
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        <h1>ROTA <span>ATLAS</span></h1>
+      </a>
+      <p class="subtitle">
+        Se você está procurando o lugar ideal para curtir o verão, confira nossa seleção de destinos especialmente filtrados para essa estação!
+      </p>
+      <div class="arrow-down">↓</div>
+    </section>
+
+    <section class="destinations">
+  <div class="destination">
+    <a href="angra.html">
+      <img src="images/angra.jpg" alt="Angra dos Reis" />
+      <h3>Angra dos Reis</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="riodejaneiro.html">
+      <img src="images/rio.jpg" alt="Rio de Janeiro" />
+      <h3>Rio de Janeiro</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="miami.html">
+      <img src="images/miami.jpg" alt="Miami" />
+      <h3>Miami</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="jericoacoara.html">
+      <img src="images/jerico.jpg" alt="Jericoacoara" />
+      <h3>Jericoacoara</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="barcelona.html">
+      <img src="images/barcelona.jpg" alt="Barcelona" />
+      <h3>Barcelona</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="portodegalinhas.html">
+      <img src="images/porto.jpg" alt="Porto de Galinhas" />
+      <h3>Porto de Galinhas</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="#">
+      <img src="images/paris.jpeg" alt="Paris" />
+      <h3>Paris</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="#">
+      <img src="images/london.jpg" alt="Londres" />
+      <h3>Londres</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="#">
+      <img src="images/tokyo.jpg" alt="Tóquio" />
+      <h3>Tóquio</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="#">
+      <img src="images/newyork.jpg" alt="Nova York" />
+      <h3>Nova York</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="#">
+      <img src="images/sydney.jpg" alt="Sydney" />
+      <h3>Sydney</h3>
+    </a>
+  </div>
+  <div class="destination">
+    <a href="#">
+      <img src="images/capetown.jpg" alt="Cidade do Cabo" />
+      <h3>Cidade do Cabo</h3>
+    </a>
+  </div>
+</section>
+  </main>
+  <script src="main.js"></script>
+</body>
+<script src="main.js"></script>
+</html>

@@ -1,0 +1,770 @@
+@font-face {
+  font-family: 'ablation';
+  src: url('fonts/Ablation Extra Bold.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #87410E;
+  color: #000000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===========================
+   HEADER COM LAYOUT AJUSTADO
+=========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #87410E;
+  position: relative;
+  z-index: 1000;
+} 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+  height: 120px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.login-btn,
+.explore-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.login-btn {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.explore-btn {
+  background: none;
+  border: 2px solid #f0ec01;
+  color: #fff;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: white;
+  font-size: 24px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1003;
+}
+
+/* ====================
+   HERO
+==================== */
+.hero {
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  letter-spacing: 20px;
+  font-family: 'ablation', sans-serif;
+  margin: 0;
+}
+
+.hero span {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 10px;
+  font-family: 'ablation', sans-serif;
+  margin-top: -10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin: 20px 0;
+  color: #ffffff;
+}
+
+.hero-actions {
+  margin-top: 40px;
+}
+
+/* SEARCH BAR */
+.search-bar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px; 
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  background-color: #C15C13;
+}
+
+#search-bar {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 18px;  /* Melhor legibilidade */
+  border: none;
+  outline: none;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder {
+  color: #004d40(255, 255, 255);
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.search-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #000000;
+}
+
+/* barra de pesquisa 
+#suggestions-list {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0;
+  list-style-type: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+*/
+#suggestions-list li {
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+#suggestions-list li:hover {
+  background-color: #f7f7f7;
+}
+
+/* MAPA */
+#map {
+  width: 100%;
+  height: 100%;
+  max-height: 600px; /* Limitar a altura do mapa */
+  border-radius: 10px;
+}
+
+/* Responsividade do mapa */
+@media (max-width: 768px) {
+  #map {
+    height: 400px;  /* Menor altura no mobile */
+  }
+}
+
+/* CARDS */
+.cards-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #C15C13;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 30%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* CALL TO ACTION */
+.call-to-action {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.call-to-action h2 {
+  font-size: 36px;
+  color: #ffffff;
+}
+
+.call-to-action p {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* MAPA */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 800px;
+  background-color: #f4f4f9;
+  flex-wrap: wrap;
+}
+
+.quadrado {
+  display: flex;
+  justify-content: space-between;
+  background-color: #004d40;
+  border-radius: 10px;
+  width: 70%;
+  height: 750px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+.texto {
+  flex: 1;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 45px;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+.texto2 {
+  color: #dbdbdb;
+}
+
+.textin {
+  font-size: 18px;
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 50%;
+}
+
+#map {
+  height: 750px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* BOTÃO SURPREENDA */
+.surpreenda-me-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.surpreenda-me-btn:hover {
+  background-color: #ff4c3a;
+}
+
+.mensagem-destino,
+.nome-destino,
+.texto-gerado {
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.nome-destino {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  text-decoration: none;
+}
+
+.texto-gerado {
+  background-color: #004d40;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ========================
+   RESPONSIVO
+======================== */
+@media (max-width: 1024px) {
+  .card {
+    width: 48%;
+  }
+
+  .quadrado {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  #map {
+    height: 400px;
+  }
+
+  .imagem {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .container {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .main-nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: #000000f2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    padding: 40px;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 30px;
+    font-size: 20px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-btn, .explore-btn {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: 10px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .search-btn {
+    width: 100%;
+    margin-top: 0;
+    padding: 12px 0;
+  }
+
+  .search-bar-wrapper {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .cards-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .texto {
+    font-size: 28px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .textin {
+    font-size: 16px;
+  }
+
+  #map {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: 6px;
+  }
+
+  .hero span {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+
+  .call-to-action h2 {
+    font-size: 24px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 12px;
+  }
+
+  .surpreenda-me-btn {
+    width: 100%;
+  }
+}
+
+/* ANIMAÇÃO MENU MOBILE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .destinations {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Fundo geral: claro e neutro */
+body {
+  background-color: #f4f4f9;
+}
+
+/* Cabeçalho: verde petróleo (elegante e confiável) */
+header {
+  background-color: #004d40;
+}
+
+/* Barra de busca: verde claro suave (refrescante) */
+.search-bar {
+  background-color: #e0f2f1;
+}
+
+/* Cartões: fundo branco, limpo e versátil */
+.card {
+  background-color: #ffffff;
+}
+
+/* Texto do conteúdo dos cartões: marrom escuro (quente e legível) */
+.card-content p {
+  color: #4e342e;
+}
+
+/* Subtítulos: verde água médio (harmonia e calma) */
+.subtitle {
+  color: #00796b;
+}
+
+/* Links do menu: cor coesa com o cabeçalho */
+.menu a {
+  color: #ffffff;
+}
+
+/* Título da seção call to action */
+.call-to-action h2 {
+  color: #00796b;
+}
+
+/* Texto do call to action */
+.call-to-action p {
+  color: #4e342e;
+}
+
+/* Títulos dos cartões */
+.card-content h3 {
+  color: #00796b;
+}
+
+.quadrado {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+#streetview-container {
+  flex: 1;
+  max-width: 700px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#streetview-container iframe {
+  width: 800px;
+  height: 650px;
+  border-radius: 10px;
+  transform: translateY(130px); /* Ajuste o valor conforme desejar */
+}
+
+@media (max-width: 768px) {
+  .search-bar-wrapper {
+    width: 70%; /* Ajuste o tamanho da barra no mobile */
+    max-width: 100%;
+  }
+
+  .search-bar {
+    border-radius: 25px; /* Menos arredondado no mobile */
+  }
+
+  #search-bar {
+    padding: 10px 15px;
+    font-size: 16px; /* Tamanho menor da fonte */
+  }
+
+  .search-btn {
+    padding: 10px;
+  }
+}
+
+/* Barra de pesquisa */
+.search-bar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  align-items: center;
+}
+
+#search-bar {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: #333;
+  background-color: transparent;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lista de sugestões */
+#suggestions-list {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  max-height: 220px;
+  overflow-y: auto;
+  z-index: 1000;
+  padding: 0;
+  list-style-type: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+#suggestions-list li {
+  padding: 12px 16px;
+  font-size: 15px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#suggestions-list li:hover {
+  background-color: #f7f7f7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .search-bar-wrapper {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+#no-destination-message {
+  font-size: 16px;
+  color: #ff5722;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#no-destination-message.loading {
+  color: #ff9800;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuário</title>
+  <link rel="stylesheet" href="styles3.css">
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png">
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100">
+      </a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="destino.html">Destinos</a></li>
+        <li><a href="serviços.html">Serviços</a></li>
+        <li><a href="avaliações.html">Avaliações</a></li>
+      </ul>
+    </nav>
+    <div class="actions">
+      <button class="login-btn" href="login.html"> <img src="images/fotoperfil.webp" class="fotomeupf" alt="">Meu
+        perfil</button>
+      <button class="explore-btn" onclick="window.location.href='Cadastrar.html'">Desconectar</button>
+
+    </div>
+  </header>
+
+  <header class="profile-header">
+    <div class="profile-info">
+      <img src="images/fotoperfil.webp" alt="Foto de perfil" class="profile-picture">
+      <div class="profile-details">
+        <h1>João da Silva</h1>
+        <p class="tagline">Viajante, explorador e gosta da simplicidade.</p>
+      </div>
+    </div>
+    <button class="edit-profile-btn">Editar perfil</button>
+  </header>
+
+  <main class="posts-container">
+    <article class="post">
+      <div class="post-header">
+        <img src="images/fotoperfil.webp" alt="Foto de perfil" class="user-avatar">
+        <div class="post-user-info">
+          <h3>João da Silva</h3>
+          <span>Viagem à Angra dos Reis</span>
+        </div>
+      </div>
+      <img src="images/ilhadodentista.webp" alt="Foto do post" class="post-image">
+      <p class="post-text">Nesse verão me diverti muito indo pra angra com minha familia e amigos!</p>
+      <div class="post-interactions">
+        <button class="like-btn">Curtir</button>
+        <a href="comentarios.html" class="comment-btn">Comentar</a>
+
+    </article>
+
+    <article class="post">
+      <div class="post-header">
+        <img src="images/fotoperfil.webp" alt="Foto de perfil" class="user-avatar">
+        <div class="post-user-info">
+          <h3>Joâo da Silva</h3>
+          <span>Aproveitando mais um pouco de Angra</span>
+        </div>
+      </div>
+      <img src="images/escuna.jpg" alt="Foto do post" class="post-image">
+      <p class="post-text">Aproveitando um passeio de escuna com minha familia! #escuna</p>
+      <div class="post-interactions">
+        <button class="like-btn"> Curtir</button>
+        <a href="comentarios.html" class="comment-btn">Comentar</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2024 - Desenvolvido por Você.</p>
+  </footer>
+</body>
+
+</html>

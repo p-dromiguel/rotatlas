@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR" x-data="{ menuAberto: false }">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços - Rota Atlas</title>
+  <link rel="stylesheet" href="serviços.css" />
+  <link rel="icon" type="image/png" href="icones/favicon-16x16.png" />
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Rota_Atlas-removebg-preview.png" alt="Rota Atlas Logo" height="100" />
+      </a>
+    </div>
+
+    <button class="menu-toggle" @click="menuAberto = !menuAberto" aria-label="Abrir menu">
+      <span>☰</span>
+    </button>
+
+    <nav :class="menuAberto ? 'main-nav active' : 'main-nav'" x-transition>
+      <ul class="menu">
+        <li><a href="destino.html" @click="menuAberto = false">Destinos</a></li>
+        <li><a href="serviços.html" @click="menuAberto = false">Serviços</a></li>
+        <li><a href="avaliações.html" @click="menuAberto = false">Avaliações</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions" id="user-area">
+      <!-- Conteúdo será preenchido pelo JS -->
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Serviços</h1>
+    <p>Explore os principais serviços oferecidos pela Rota Atlas para planejar suas viagens com facilidade e eficiência.</p>
+  </section>
+
+  <section class="services-grid">
+    <div class="service-box">
+      <h2>Destinos Incríveis</h2>
+      <p>Explore os destinos mais fascinantes do mundo e descubra o que cada um oferece.</p>
+      <img src="images/eiffel.png" alt="Destinos Incríveis" class="service-icon" />
+    </div>
+    <div class="service-box">
+      <h2>Cultura e Gastronomia</h2>
+      <p>Conheça a cultura e a culinária local. Encontre os melhores restaurantes e tradições.</p>
+      <img src="images/culinaria.png" alt="Cultura e Gastronomia" class="service-icon" />
+    </div>
+    <div class="service-box">
+      <h2>Guias de Viagem</h2>
+      <p>Guia completo sobre o que ver e fazer em cada destino. Planeje seu roteiro.</p>
+      <img src="images/roteiro.png" alt="Guias de Viagem" class="service-icon" />
+    </div>
+    <div class="service-box">
+      <h2>Eventos e Festividades</h2>
+      <p>Descubra eventos e festividades em cada destino e a melhor época para visitar.</p>
+      <img src="images/evento.jpg" alt="Eventos e Festividades" class="service-icon" />
+    </div>
+    <div class="service-box">
+      <h2>Hotéis e Hospedagem</h2>
+      <p>Encontre as melhores opções de hospedagem com base em avaliações e recomendações.</p>
+      <img src="images/hotel.png" alt="Hotéis e Hospedagem" class="service-icon" />
+    </div>
+    <div class="service-box">
+      <h2>Dicas de Viagem</h2>
+      <p>Dicas práticas para economizar e aproveitar sua viagem ao máximo.</p>
+      <img src="images/mala.png" alt="Dicas de Viagem" class="service-icon" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 Rota Atlas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+
+
+</html>
